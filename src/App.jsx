@@ -27,9 +27,7 @@ function App() {
         onClose: ()=>{
           window.location.reload();
         }
-
       })
-      
     }
     if(formdata.password !==formdata.confirmpassword){
       toast.error("password and confirmpassword must be same")
@@ -38,7 +36,7 @@ function App() {
 
   return (
     <>
-      <div className='sm:h-screen h-auto w-[100%] container flex flex-col items-center'>
+      <div className='sm:h-screen h-auto w-screen container flex flex-col items-center'>
         <h1 className='w-1/2 h-auto border-4 border-white text-neutral-600 duration-300 hover:text-sky-300 hover:border-fuchsia-400 font-extrabold text-center mt-14  text-[4vw] rounded-3xl'>Student Login</h1>
         <div >
           <form  onSubmit={submitHandler} >
@@ -61,7 +59,7 @@ function App() {
             <label >
               <p>Password</p>
               <div className='flex content-evenly'><input id='pass' type={showpassword1 ? 'text' : 'password'} placeholder='Password' name='password' onChange={handleChange} value={formdata.password} required  className='input '/>
-              <span className='bg-black text-white pt-3 rounded-r-lg' onClick={()=>setshowPassword1((prev)=>!prev)}>{showpassword1 ? < GrView style={{width:'35px' }}/> : < BiHide style={{width:'35px' }}/>}</span></div>
+               <span className='bg-black text-white pt-3 rounded-r-lg' onClick={()=>setshowPassword1((prev)=>!prev)}>{showpassword1 ? < GrView style={{width:'35px' }}/> : < BiHide style={{width:'35px' }}/>}</span></div>
             </label>
             <label >
               <p>confirm password</p>
