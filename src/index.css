@@ -35,3 +35,7 @@ input{
     height: 35px;
 
 }
+button:hover{
+   box-shadow: 3px 3px 5px rgb(190 18 60);
+    transition-duration: 50ms;
+}

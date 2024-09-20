@@ -38,11 +38,11 @@ function App() {
 
   return (
     <>
-      <div className='h-screen w-full container flex flex-col items-center'>
+      <div className='sm:h-screen h-auto w-[100%] container flex flex-col items-center'>
         <h1 className='w-1/2 h-auto border-4 border-white text-neutral-600 duration-300 hover:text-sky-300 hover:border-fuchsia-400 font-extrabold text-center mt-14  text-[4vw] rounded-3xl'>Student Login</h1>
-        <div>
-          <form  onSubmit={submitHandler}>
-            <div className='flex gap-5 mt-4'>
+        <div >
+          <form  onSubmit={submitHandler} >
+            <div className='flex gap-5 mt-4 sm:flex-row flex-col'>
             <label >
               <p>First Name</p>
               <input type="text" placeholder='First Name' id='inp' name='firstname' onChange={handleChange} value={formdata.firstname} required className='input '/>
@@ -57,7 +57,7 @@ function App() {
               <p>Email address</p>
               <input type="email" placeholder='Email' id='inp' name='email' onChange={handleChange} value={formdata.email} required  className='input '/>
             </label></div>
-            <div className='flex gap-5 mt-4'>
+            <div className='flex gap-5 mt-4 sm:flex-row flex-col'>
             <label >
               <p>Password</p>
               <div className='flex content-evenly'><input id='pass' type={showpassword1 ? 'text' : 'password'} placeholder='Password' name='password' onChange={handleChange} value={formdata.password} required  className='input '/>
@@ -65,11 +65,11 @@ function App() {
             </label>
             <label >
               <p>confirm password</p>
-              <div className='flex content-evenly'><input id='pass' type={showpassword2 ? 'text' : 'password'} placeholder='confirm password' name='confirmpassword' onChange={handleChange} value={formdata.confirmpassword} required  className='input '/>
+              <div className='  flex content-evenly'><input id='pass' type={showpassword2 ? 'text' : 'password'} placeholder='confirm password' name='confirmpassword' onChange={handleChange} value={formdata.confirmpassword} required  className='input '/>
               <span className='bg-black text-white pt-3 rounded-r-lg outline-none' onClick={()=>setshowPassword2((prev)=>!prev)}>{showpassword2 ? < GrView style={{width:'35px' }}/> : < BiHide style={{width:'35px' }}/>}</span></div>
             </label>
             </div>
-            <button className='w-1/2 h-[35px] rounded-sm text-white font-extrabold bg-blue-700 mt-24 ml-20'>Submit</button>
+            <button className='sm:none mb-10 w-1/2 h-[35px] rounded-sm text-white font-extrabold bg-blue-700 mt-24 ml-20'>Submit</button>
           </form>
         </div>
       </div>
