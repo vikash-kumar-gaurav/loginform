@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input{
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 0 7.5px;
+    border:transparent
+}
+input::placeholder{
+    color: cornflowerblue;
+}
+#pass{
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 0 7.5px;
+    border:transparent;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 240px;
+}
+#inp{
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 0 7.5px;
+    border:transparent;
+    border-radius: 8px;
+    width: 250px;
+}
+input{
+    height: 35px;
+
+}
